@@ -98,7 +98,7 @@ $(document).ready(function() {
         $('.fa-times').removeClass('show');
         $('.fa-bars').removeClass('hidden-bars');
         $('.left-part').addClass('hidden-sidebar');
-        $('.right-wrapper').css('filter', ' grayscale(150%)')
+        $('.right-wrapper').css('filter', ' grayscale(0%)')
 
     });
     $('.right-part .fa-bars').on('click', function() {
