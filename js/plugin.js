@@ -93,5 +93,19 @@ $(document).ready(function() {
             $('#' + $(this).data('click')).fadeIn();
         }
     });
+    //Toggle Btn Sidebar
+    $('.inner .fa-times').on('click', function() {
+        $('.fa-times').removeClass('show');
+        $('.fa-bars').removeClass('hidden-bars');
+        $('.left-part').addClass('hidden-sidebar');
+        $('.right-wrapper').css('filter', ' grayscale(150%)')
 
+    });
+    $('.right-part .fa-bars').on('click', function() {
+        $('.fa-times').addClass('show');
+        $('.fa-bars').addClass('hidden-bars');
+        $('.left-part').removeClass('hidden-sidebar');
+        $('.right-wrapper').css('filter', ' grayscale(150%)')
+
+    })
 });
