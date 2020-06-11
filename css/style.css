@@ -484,15 +484,19 @@ body {
 
 /*Start portfolio section*/
 
-#design {
+#show-all.hidden {
     display: none;
 }
 
-#photography {
+#design.hidden {
     display: none;
 }
 
-#development {
+#photography.hidden {
+    display: none;
+}
+
+#development.hidden {
     display: none;
 }
 

@@ -85,12 +85,47 @@ $(document).ready(function() {
             });
         }
     });
-
+    //define data role
+    $(".library-address li a").data('click');
     //library
     $(".library-address li a").on("click", function(e) {
         e.preventDefault();
-        if ($(this).data('click') == $('.library').attr('id')) {
-            $('#' + $(this).data('click')).fadeIn();
+
+        //var x = $('.library').find('id');
+        //console.log($('.library').attr('id'))
+
+        var ids = $('.library').map(function() {
+            return $(this).attr('id');
+        });
+        let id = $('#' + ids[0]);
+        let id1 = $('#' + ids[1]);
+        let id2 = $('#' + ids[2]);
+        let id3 = $('#' + ids[3]);
+
+        var dataName = $(this).attr('data-click');
+        if (dataName == ids[0]) {
+
+            id.removeClass('hidden')
+            id1.removeClass('hidden')
+            id2.removeClass('hidden')
+            id3.removeClass('hidden')
+
+
+        } else if (dataName == ids[1]) {
+            id.addClass('hidden')
+            id1.removeClass('hidden')
+            id2.addClass('hidden')
+            id3.addClass('hidden')
+        } else if (dataName == ids[2]) {
+            id.addClass('hidden')
+            id2.removeClass('hidden')
+            id1.addClass('hidden')
+            id3.addClass('hidden')
+        } else if (dataName == ids[3]) {
+            id.addClass('hidden')
+            id3.removeClass('hidden')
+            id1.addClass('hidden')
+            id2.addClass('hidden')
         }
     });
     //Toggle Btn Sidebar
