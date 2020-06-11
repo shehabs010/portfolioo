@@ -91,25 +91,22 @@ $(document).ready(function() {
     $(".library-address li a").on("click", function(e) {
         e.preventDefault();
 
-        //var x = $('.library').find('id');
-        //console.log($('.library').attr('id'))
-
         var ids = $('.library').map(function() {
             return $(this).attr('id');
         });
+
         let id = $('#' + ids[0]);
         let id1 = $('#' + ids[1]);
         let id2 = $('#' + ids[2]);
         let id3 = $('#' + ids[3]);
 
         var dataName = $(this).attr('data-click');
-        if (dataName == ids[0]) {
 
+        if (dataName == ids[0]) {
             id.removeClass('hidden')
             id1.removeClass('hidden')
             id2.removeClass('hidden')
             id3.removeClass('hidden')
-
 
         } else if (dataName == ids[1]) {
             id.addClass('hidden')
